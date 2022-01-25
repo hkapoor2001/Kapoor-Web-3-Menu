@@ -1,0 +1,61 @@
+#stateparkmap{
+    margin-top: 10%;
+    #stateparkmapheader{
+        font-family: 'PlayfairDisplay-Bold';
+        font-size: 35px;
+        color: #EFA541;
+        margin-left: 5%;
+    }
+
+    #stateparkmapherodiv{
+        #stateparkmaphero{
+            width: 100%;
+        }
+    }
+
+    #stateparkmapbuttondiv{
+        display: flex;
+        justify-content: center;
+        #stateparkmapbutton{
+            background-color: #408274;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            border: none;
+        }
+    }
+
+
+    @include md {
+        margin-top: 10%;
+        margin-bottom: 0%;
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-areas: 
+        ". stateparkmapheader ."
+        ". stateparkmaphero ."
+        ". stateparkmapbutton .";
+    
+        #stateparkmapheader{
+            grid-area: stateparkmapheader;
+            margin-left: 0%;
+            font-family: 'PlayfairDisplay-Bold';
+            font-size: 70px;
+            color: #EFA541;
+            margin-right: 5%;
+        }
+
+        #stateparkmapherodiv{
+            grid-area: stateparkmaphero;
+        }
+
+        #stateparkmapbuttondiv{
+            grid-area: stateparkmapbutton;
+            display: flex;
+            justify-content: flex-end;
+        }
+        }
+    }

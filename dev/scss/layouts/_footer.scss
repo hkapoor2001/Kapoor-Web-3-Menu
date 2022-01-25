@@ -1,0 +1,191 @@
+/* =============
+    footer
+============= */
+
+#footer{
+
+    #footerlogodesktopid{
+        display: none;
+    }
+
+    a{
+        color: $white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+
+    }
+
+    padding-top: 5%;
+    padding-bottom: 10%;
+    background-color: $ocean;
+    color: $white;
+    font-family: OpenSans-Regular;
+
+
+    #footerlogomobilediv{
+        display: flex;
+        justify-content: center;
+    }
+    #mobilelogotext{
+        display: flex;
+        justify-content: center;
+        font-family: 'OpenSans-Regular';
+        font-size: 20px;
+    }
+
+    #footerrow2{
+        font-weight: bold;
+        padding-left: 5%;
+    }
+
+    #footerdirections{
+        margin-left: 30%;
+        margin-right: 30%;
+        font-family: 'OpenSans-Regular';
+    }
+
+    #footericondiv{
+        grid-area: fr4;
+        display: grid;
+        grid-template-columns: 15% 17.5% 17.5% 17.5% 17.5% 15%;
+        grid-template-areas: ". fi1 fi2 fi3 fi4 .";
+        margin-left: 4%;
+    
+    
+        #footericon1{
+            grid-area: fi1;
+        }
+        #footericon2{
+            grid-area: fi2;
+        }
+        #footericon3{
+            grid-area: fi3;
+        }
+        #footericon4{
+            grid-area: fi4;
+        }
+    }
+    
+
+
+
+
+
+    @include md {
+        display: grid;
+        grid-template-areas: 
+        "fr1"
+        "fr2"
+        "fr3"
+        "fr4";
+        
+        #mobilelogotext{
+            display: none;
+        }
+
+        #footerlogomobilediv{
+            display: none;
+        }
+    
+        #footerdesktoplogodiv{
+            grid-area: fr1;
+            display: grid;
+            grid-template-columns: 45% 10% 45%;
+            grid-template-areas: ". fl .";
+            #footerlogodesktopid{
+                grid-area: fl;
+            }   
+        }
+        
+        #footerrow2{
+            margin-left: 0%;
+            margin-right: 0%;
+            padding-left: 0%;
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            grid-area: fr2;
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-areas: 
+            ". f1 f2 f3 ."
+            ". f4 f5 f6 .";
+        
+            #footer1{
+                grid-area: f1;
+            }
+            #footer2{
+                grid-area: f2;
+                display: flex;
+                justify-content: center;
+            }
+            #footer3{
+                grid-area: f3;
+                display: flex;
+                justify-content: flex-end;
+            }
+            #footer4{
+                grid-area: f4;
+            }
+            #footer5{
+                grid-area: f5;
+                display: flex;
+                justify-content: center;
+            }
+            #footer6{
+                grid-area: f6;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        
+        #footerdirections{
+            margin-left: 0%;
+            margin-right: 0%;
+            grid-area: fr3;
+            display: grid;
+            grid-template-columns: 45% 10% 45%;
+            grid-template-areas: ". fd .";
+            #footerdirectionstext{
+                grid-area: fd;
+            }   
+        }
+        
+        #footericondiv{
+            grid-area: fr4;
+            display: flex;
+            justify-content: space-evenly;
+            margin-right: 30%;
+            margin-left: 30%;
+            padding-top: 3%;
+            font-size: 50px;
+        
+            #footericon1{
+                grid-area: fi1;
+            }
+            #footericon2{
+                grid-area: fi2;
+            }
+            #footericon3{
+                grid-area: fi3;
+            }
+            #footericon4{
+                grid-area: fi4;
+            }
+        }
+
+        padding-bottom: 5%;
+        padding-top: 1.5%;
+
+        a{
+            font-size: 25px;
+        }
+        p{
+            font-size: 25px;
+        }
+    }
+
+    @include xl{
+        
+    }
+}

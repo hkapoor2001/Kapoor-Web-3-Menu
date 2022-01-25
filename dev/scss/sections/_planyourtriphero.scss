@@ -1,0 +1,30 @@
+#planyourtriphero{
+
+    margin-top: 10%;
+    
+    #planyourtripherodiv{
+        display: none;
+    }
+
+    h1{
+        font-family: 'PlayfairDisplay-Bold';
+        font-size: 40px;
+        color: #EFA541;
+    }
+
+    @include md{
+        #planyourtripherodiv{
+            display: block;
+            #planyourtripheroimg{
+                width: 100%;
+            }
+        }
+    }
+
+    @include xl {
+        h1{
+            font-size: 70px;
+            margin-left: 2%;
+        }
+    }
+}
