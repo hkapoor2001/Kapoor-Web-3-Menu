@@ -388,9 +388,8 @@ header #row1 #mobilemenu {
 header #row1 #mobilemenu #mobilelogo {
   grid-area: logo;
 }
-header #row1 #mobilemenu #mobileburger {
+header #row1 #mobilemenu #burger {
   grid-area: burger;
-  font-size: 80px;
 }
 header #row1 #desktopnav {
   display: none;
