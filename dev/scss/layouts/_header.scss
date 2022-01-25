@@ -14,14 +14,14 @@ header{
         padding-bottom: 1%;
         #mobilemenu{
             display: grid;
-            grid-template-columns: 1% 10% 74% 10% 5%;
+            grid-template-columns: 4% 10% 60% 1% 35%;
             grid-template-areas: ". logo . burger ." ;
     
             #mobilelogo{
                 grid-area: logo;
             }
     
-            #burger{
+            #burgerdiv{
                 grid-area: burger;
             }
             
@@ -34,6 +34,16 @@ header{
     }
     #row2{
         display: none;
+    }
+
+
+    @include md{
+        #mobilemenu{
+            display: grid;
+            grid-template-columns: 20% auto;
+            grid-template-areas: " logo . burger " ;
+        }  
+
     }
     
 

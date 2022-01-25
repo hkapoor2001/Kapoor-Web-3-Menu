@@ -382,13 +382,13 @@ header #row1 {
 }
 header #row1 #mobilemenu {
   display: grid;
-  grid-template-columns: 1% 10% 74% 10% 5%;
+  grid-template-columns: 4% 10% 60% 1% 35%;
   grid-template-areas: ". logo . burger .";
 }
 header #row1 #mobilemenu #mobilelogo {
   grid-area: logo;
 }
-header #row1 #mobilemenu #burger {
+header #row1 #mobilemenu #burgerdiv {
   grid-area: burger;
 }
 header #row1 #desktopnav {
@@ -396,6 +396,13 @@ header #row1 #desktopnav {
 }
 header #row2 {
   display: none;
+}
+@media (min-width: 768px) {
+  header #mobilemenu {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-areas: " logo . burger ";
+  }
 }
 @media (min-width: 1024px) {
   header #row1 #p {
