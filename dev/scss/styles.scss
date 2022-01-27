@@ -1,7 +1,6 @@
 @charset 'utf-8';
 
-// Helpers Styles
-
+//Helpers Styles
 @import "helpers/_mixins";
 @import "helpers/_variables";
 
@@ -10,24 +9,14 @@
 @import "base/_base";
 @import "base/_typography";
 
-// Components Styles
-@import "components/_buttons";
-@import "components/_forms";
+// Component Styles
 @import "components/_navigation";
 
+//Layout styles
+@import "layout/_header";
+@import "layout/_footer";
+
 // Sections Styles
-@import "layouts/_header";
-@import "sections/_video";
-@import "sections/_attractions";
-@import "sections/_discoverypass";
-@import "sections/_feelthepowerofthefalls";
-@import "sections/_history";
-@import "sections/_planyourtriphero";
-@import "sections/_planyourtrip";
-@import "sections/_comeforthewonder";
-@import "sections/_mapanddirections";
-@import "sections/_getdirections";
-@import "sections/_stateparkmap";
-@import "sections/_parking";
-@import "sections/_contactus";
-@import "layouts/_footer"
+@import "sections/_content";
+@import "sections/_preloader";
+@import "sections/_hero";

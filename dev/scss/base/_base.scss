@@ -1,17 +1,8 @@
-/* =============
-    Base
-============= */
-
-p{
-    font-family: 'Open Sans', sans-serif;
+body {
+    margin: 0px;
+    
 }
 
-h2{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-}
-
-h3{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+.gs-dev-tools{
+    z-index: 10000;
 }
