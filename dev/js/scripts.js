@@ -161,16 +161,20 @@
 var button = document.querySelector("#burgerdiv")
 let CanISeeMenu = false;
 import { burgerTL } from "./burgeranimation";
+import { menuTL } from "./menuanimation";
+
 
 button.addEventListener("click", openclosemenu);
 
 function openclosemenu(){
     if(CanISeeMenu === false){
         burgerTL.play();
+        menuTL.play();
         CanISeeMenu = true;
     }
     else{
         burgerTL.reverse();
+        menuTL.play();
         CanISeeMenu = false;
     }
 }

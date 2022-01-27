@@ -13,12 +13,6 @@ function burgerout(){
 
 }
 
-function menu(){
-    const tl = gsap.timeline();
-    tl.from(".menu",{x:8000, stagger:.1})
-    return tl;
-}
 
 
 burgerTL.add(burgerout)
-.add(menu)

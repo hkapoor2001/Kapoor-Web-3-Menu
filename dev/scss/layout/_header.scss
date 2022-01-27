@@ -1,22 +1,35 @@
 header{
+
     position: fixed;
     width: 100%;
     background-color: white;
     z-index: 1000;
     display: grid;
 
-    #nav{
-        display: none;
-    }
+    
 
-    #nav-container{
-        display: block;
-        z-index: 1000;
-    }
+
 
     display: grid;
     grid-template-columns: 70% auto;
     grid-template-areas: "logo burger" ;
+
+    #nav{
+        background-color: #7C0909;
+        grid-area: nav;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 5;
+        display: grid;
+
+        @include lg {
+            background-color: white;
+            position: static;
+            height: 100%;
+            width: 100%;
+        }
+    }
 
 
     #logo{
@@ -31,14 +44,7 @@ header{
         z-index: 10;
     }
 
-    #menu{
-        z-index: 5;
-        position: absolute;
-    }
 
-    #xdiv{
-        z-index: 10;
-    }
 
 
     @include lg{
@@ -72,10 +78,10 @@ header{
                 color:#671818;
             }
         }
-        #menu{
+        #burgerdiv{
             display: none;
         }
 
-    }
 
+    }
     }
