@@ -7,6 +7,19 @@ header{
     grid-template-columns: 70% auto;
     grid-template-areas: "logo burger" ;
 
+
+    #logo{
+        grid-area: logo;
+    }
+
+    #burgerdiv{
+        grid-area: burger;
+        #burger{
+            z-index: 100;
+        }
+    }
+
+
     #nav{
         // .navdivclass{
         //    background-color: #7C0909;
@@ -18,6 +31,7 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 3;
 
         #nav1{
             text-decoration: none;
@@ -37,19 +51,6 @@ header{
             color: white;
         }
     }
-
-
-    #logo{
-        grid-area: logo;
-    }
-
-    #burgerdiv{
-        grid-area: burger;
-        z-index: 100;
-    }
-
-
-
 
     @include lg{
         grid-template-columns: 5% 10% 50% 30% 5%;

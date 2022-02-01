@@ -367,6 +367,15 @@ header {
   grid-template-columns: 70% auto;
   grid-template-areas: "logo burger";
 }
+header #logo {
+  grid-area: logo;
+}
+header #burgerdiv {
+  grid-area: burger;
+}
+header #burgerdiv #burger {
+  z-index: 100;
+}
 header #nav {
   background-color: #7C0909;
   position: fixed;
@@ -375,6 +384,7 @@ header #nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 header #nav #nav1 {
   text-decoration: none;
@@ -390,13 +400,6 @@ header #nav #nav3 {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   color: white;
-}
-header #logo {
-  grid-area: logo;
-}
-header #burgerdiv {
-  grid-area: burger;
-  z-index: 100;
 }
 @media (min-width: 992px) {
   header {
