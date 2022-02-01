@@ -158,23 +158,42 @@
 
 // GSDevTools.create();
 
-var button = document.querySelector("#burgerdiv")
 let CanISeeMenu = false;
 import { burgerTL } from "./burgeranimation";
-import { menuTL } from "./menuanimation";
+import { MenuAnimation } from "./menuanimation";
+import { displayWindowSize } from "./mobileresizing";
+import {scrollPage} from "./pageScroll";
 
 
+var button = document.querySelector("#burgerdiv");
 button.addEventListener("click", openclosemenu);
+let navButtons = document.querySelectorAll(".nav-buttons");
+
 
 function openclosemenu(){
     if(CanISeeMenu === false){
         burgerTL.play();
-        menuTL.play();
+        MenuAnimation.play();
         CanISeeMenu = true;
     }
     else{
         burgerTL.reverse();
-        menuTL.play();
+        MenuAnimation.reverse();
         CanISeeMenu = false;
     }
 }
+
+for (const button of navButtons){
+    button.addEventListener("click", checkScrolling);
+    button.addEventListener("click", openclosemenu);
+}
+
+function checkScrolling(e) {
+    const indexValue = [].indexOf.call(navButtons, e.target)
+    if (indexValue != -1) {
+        scrollPage(indexValue);
+    }
+}
+
+window.addEventListener("resize", displayWindowSize);
+window.addEventListener('load', displayWindowSize); 

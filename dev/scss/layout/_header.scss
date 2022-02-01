@@ -1,33 +1,40 @@
 header{
-
     position: fixed;
     width: 100%;
     background-color: white;
-    z-index: 1000;
-    display: grid;
-
-    
-
-
-
+    z-index: 2;
     display: grid;
     grid-template-columns: 70% auto;
     grid-template-areas: "logo burger" ;
 
     #nav{
+        // .navdivclass{
+        //    background-color: #7C0909;
+        // }
         background-color: #7C0909;
-        grid-area: nav;
         position: fixed;
         width: 100vw;
         height: 100vh;
-        z-index: 5;
-        display: grid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        @include lg {
-            background-color: white;
-            position: static;
-            height: 100%;
-            width: 100%;
+        #nav1{
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+
+        #nav2{
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+
+        #nav3{
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
         }
     }
 
@@ -36,12 +43,9 @@ header{
         grid-area: logo;
     }
 
-    #menudiv{
-        grid-area: burger;
-    }
-
     #burgerdiv{
-        z-index: 10;
+        grid-area: burger;
+        z-index: 100;
     }
 
 
@@ -51,6 +55,7 @@ header{
         grid-template-columns: 5% 10% 50% 30% 5%;
         grid-template-areas: ". logo . nav .";
         padding: 10px 16px;
+
         #logo{
             grid-area: logo;
         }
@@ -81,7 +86,5 @@ header{
         #burgerdiv{
             display: none;
         }
-
-
     }
     }
