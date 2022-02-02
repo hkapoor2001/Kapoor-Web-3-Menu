@@ -153,12 +153,28 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/dev\/content\/buytickets.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/buytickets.html",
+      "oF" : 0
+    },
     "\/dev\/content\/content.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/content\/content.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/donate.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/donate.html",
       "oF" : 0
     },
     "\/dev\/content\/hero.kit" : {
@@ -175,6 +191,14 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/content\/preloader.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/viewthecollection.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/viewthecollection.html",
       "oF" : 0
     },
     "\/dev\/global\/head.kit" : {
@@ -217,17 +241,6 @@
       "oA" : 1,
       "oAP" : "\/dev\/js\/burgeranimation-min.js",
       "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/dev\/js\/divanimation.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/dev\/js\/divanimation-min.js",
-      "oF" : 1,
       "sC" : 3,
       "tS" : 0
     },
@@ -425,6 +438,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/dev\/scss\/sections\/_buytickets.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/scss\/sections\/_buytickets.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/dev\/scss\/sections\/_content.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -435,6 +463,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/scss\/sections\/_content.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/dev\/scss\/sections\/_donate.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/scss\/sections\/_donate.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -465,6 +508,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/scss\/sections\/_preloader.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/dev\/scss\/sections\/_viewthecollection.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/scss\/sections\/_viewthecollection.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

@@ -349,9 +349,12 @@ template {
 body {
   margin: 0px;
 }
-
-.gs-dev-tools {
-  z-index: 10000;
+body ul {
+  margin: 0;
+  padding: 0;
+}
+body ul li {
+  list-style: none;
 }
 
 body {
@@ -359,83 +362,109 @@ body {
 }
 
 header {
-  position: fixed;
-  width: 100%;
   background-color: white;
-  z-index: 2;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5000;
+  z-index: 1000;
+}
+header > div {
   display: grid;
-  grid-template-columns: 70% auto;
-  grid-template-areas: "logo burger";
+  grid-template-areas: "logo burger" "nav nav";
+  grid-template-columns: 20% auto;
 }
-header #logo {
+@media (min-width: 992px) {
+  header > div {
+    grid-template-areas: ". logo . nav .";
+    grid-template-columns: 5% 20% 40% 30% 5%;
+  }
+}
+header > div #logo-container {
   grid-area: logo;
+  padding: 10px;
 }
-header #burgerdiv {
+header > div #burger-container {
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
   grid-area: burger;
+  padding: 10px;
 }
-header #burgerdiv #burger {
+header > div #burger-container #burger {
+  position: relative;
   z-index: 100;
 }
-header #nav {
+@media (min-width: 992px) {
+  header > div #burger-container {
+    display: none;
+  }
+}
+header > div #nav-container {
   background-color: #7C0909;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  grid-area: nav;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
 }
-header #nav #nav1 {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  color: white;
+@media (min-width: 992px) {
+  header > div #nav-container {
+    background-color: white;
+    position: static;
+    height: 100%;
+    width: 100%;
+  }
 }
-header #nav #nav2 {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  color: white;
+@media (min-width: 992px) {
+  header > div #nav-container ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
-header #nav #nav3 {
+header > div #nav-container ul li {
+  margin-bottom: 20px;
+  text-align: right;
+}
+@media (min-width: 992px) {
+  header > div #nav-container ul li {
+    align-items: center;
+    display: flex;
+    margin-bottom: 0px;
+  }
+}
+header > div #nav-container ul li #nav1 {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   color: white;
 }
 @media (min-width: 992px) {
-  header {
-    grid-template-columns: 5% 10% 50% 30% 5%;
-    grid-template-areas: ". logo . nav .";
-    padding: 10px 16px;
-  }
-  header #logo {
-    grid-area: logo;
-  }
-  header #nav {
-    grid-area: nav;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 3%;
-  }
-  header #nav #nav1 {
-    grid-area: nav1;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
+  header > div #nav-container ul li #nav1 {
     color: black;
   }
-  header #nav #nav2 {
-    grid-area: nav2;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
+}
+header > div #nav-container ul li #nav2 {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+@media (min-width: 992px) {
+  header > div #nav-container ul li #nav2 {
     color: black;
   }
-  header #nav #nav3 {
-    grid-area: nav3;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    color: #671818;
-  }
-  header #burgerdiv {
-    display: none;
+}
+header > div #nav-container ul li #nav3 {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+@media (min-width: 992px) {
+  header > div #nav-container ul li #nav3 {
+    color: #7C0909;
   }
 }
 
@@ -452,6 +481,51 @@ header #nav #nav3 {
   font-size: 20px;
 }
 #content #content1 h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#buytickets {
+  display: grid;
+  grid-template-areas: ". h1 .";
+  grid-template-columns: auto 50% auto;
+  padding: 64px 0;
+  padding-top: 8%;
+}
+#buytickets h1 {
+  grid-area: h1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#viewthecollection {
+  display: grid;
+  grid-template-areas: ". h1 .";
+  grid-template-columns: auto 50% auto;
+  padding: 64px 0;
+  padding-top: 8%;
+}
+#viewthecollection h1 {
+  grid-area: h1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#donate {
+  display: grid;
+  grid-template-areas: ". h1 .";
+  grid-template-columns: auto 50% auto;
+  padding: 64px 0;
+  padding-top: 8%;
+}
+#donate h1 {
+  grid-area: h1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
   font-weight: bold;
   font-size: 40px;
 }

@@ -1,91 +1,210 @@
 header{
-    position: fixed;
-    width: 100%;
     background-color: white;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 70% auto;
-    grid-template-areas: "logo burger" ;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5000;
+    z-index: 1000;
 
+    >div{
+        display: grid;
+        grid-template-areas: 
+        "logo burger"
+        "nav nav";
+        grid-template-columns: 20% auto;
 
-    #logo{
-        grid-area: logo;
-    }
-
-    #burgerdiv{
-        grid-area: burger;
-        #burger{
-            z-index: 100;
+        @include lg {
+            grid-template-areas: ". logo . nav .";
+            grid-template-columns: 5% 20% 40% 30% 5%;
         }
-    }
 
+        #logo-container {
+            grid-area: logo;
+            padding: 10px;
+        }
 
-    #nav{
-        // .navdivclass{
-        //    background-color: #7C0909;
-        // }
+        #burger-container {
+            align-items: center;
+            justify-content: flex-end;
+            display: flex;
+            grid-area: burger;
+            padding: 10px;
+            #burger{
+                position: relative;
+                z-index: 100;
+            }
+
+            @include lg {
+                display: none;
+            }
+        }
+
+        #nav-container {
         background-color: #7C0909;
         position: fixed;
-        width: 100vw;
-        height: 100vh;
+        grid-area: nav;
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 3;
+
+        
+
+
+        @include lg {
+            background-color: white;
+            position: static;
+            height: 100%;
+            width: 100%;
+        }
+
+        ul {
+            
+
+            @include lg {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            
+        li {
+            margin-bottom: 20px;
+            text-align: right;
+
+            @include lg {
+                align-items: center;
+                display: flex;
+                margin-bottom: 0px;
+            }
 
         #nav1{
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
             color: white;
+            @include lg{
+                color: black;
+            }
         }
 
         #nav2{
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
             color: white;
+            @include lg{
+                color: black;
+            }
         }
 
         #nav3{
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
             color: white;
+            @include lg{
+                color: #7C0909;
+            }}
         }
+        
     }
+ }
+}
+}
 
-    @include lg{
-        grid-template-columns: 5% 10% 50% 30% 5%;
-        grid-template-areas: ". logo . nav .";
-        padding: 10px 16px;
 
-        #logo{
-            grid-area: logo;
-        }
-        #nav{
-            grid-area: nav;
-            display: flex;
-            justify-content: space-between;
-            padding-top: 3%;
-            #nav1{
-                grid-area: nav1;
-                text-decoration: none;
-                font-family: 'Montserrat', sans-serif;
-                color: black;
-            }
-            #nav2{
-                grid-area: nav2;
-                text-decoration: none;
-                font-family: 'Montserrat', sans-serif;
-                color: black;
-            }
-            #nav3{
-                grid-area: nav3;
-                text-decoration: none;
-                font-family: 'Montserrat', sans-serif;
-                color:#671818;
-            }
-        }
-        #burgerdiv{
-            display: none;
-        }
-    }
-    }
+
+
+
+
+// header{
+//     position: fixed;
+//     width: 100%;
+//     background-color: white;
+//     z-index: 2;
+//     display: grid;
+//     grid-template-columns: 70% auto;
+//     grid-template-areas: "logo burger" ;
+
+
+//     #logo{
+//         grid-area: logo;
+//     }
+
+//     #burgerdiv{
+//         grid-area: burger;
+//         position: relative;
+//         z-index: 100;
+//     }
+
+
+//     #nav{
+//         background-color: #7C0909;
+//         position: fixed;
+//         width: 100vw;
+//         height: 100vh;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         z-index: 3;
+
+//         #nav1{
+//             text-decoration: none;
+//             font-family: 'Montserrat', sans-serif;
+//             color: white;
+//         }
+
+//         #nav2{
+//             text-decoration: none;
+//             font-family: 'Montserrat', sans-serif;
+//             color: white;
+//         }
+
+//         #nav3{
+//             text-decoration: none;
+//             font-family: 'Montserrat', sans-serif;
+//             color: white;
+//         }
+//     }
+
+//     @include lg{
+//         grid-template-columns: 5% 10% 50% 30% 5%;
+//         grid-template-areas: ". logo . nav .";
+//         padding: 10px 16px;
+
+//         #logo{
+//             grid-area: logo;
+//         }
+//         #nav{
+//             grid-area: nav;
+//             display: flex;
+//             justify-content: space-between;
+//             padding-top: 3%;
+//             background-color: white;
+//             height: 100%;
+//             width: 100%;
+//             position: static;
+//             #nav1{
+//                 grid-area: nav1;
+//                 text-decoration: none;
+//                 font-family: 'Montserrat', sans-serif;
+//                 color: black;
+//             }
+//             #nav2{
+//                 grid-area: nav2;
+//                 text-decoration: none;
+//                 font-family: 'Montserrat', sans-serif;
+//                 color: black;
+//             }
+//             #nav3{
+//                 grid-area: nav3;
+//                 text-decoration: none;
+//                 font-family: 'Montserrat', sans-serif;
+//                 color:#671818;
+//             }
+//         }
+//         #burgerdiv{
+//             display: none;
+//         }
+//     }
+//     }
